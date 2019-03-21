@@ -1,6 +1,6 @@
 // import Library
 import React from 'react';
-import { View,Text} from 'react-native';;
+import { View,Text} from 'react-native';
 
 // write component
 class App extends React.Component {
@@ -8,10 +8,11 @@ class App extends React.Component {
         return (
             //component about react native
             <View>
-                <Text>Hello World</Text>
+                <Text>Phathadon Wongsawat</Text>
             </View>
         );
     }
 }
 //export
+
 export default App;
