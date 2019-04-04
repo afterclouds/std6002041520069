@@ -28,6 +28,10 @@ class Card extends Component{
                 <CardSection>
                     <View style={StyleSheet.button}>
                     <View style={{width: 100}}>
+                    <Button
+                        title="Buy This"
+                        color="#1E90FF"
+                        />
                     </View>
                     </View>
                 </CardSection>
