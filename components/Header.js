@@ -4,8 +4,8 @@ import { View, Text } from 'react-native';
 class Header extends Component{
     render(){
         return(
-            <View style= { StyleSheet.header }>
-                <Text style={StyleSheet.text}>{this.props.title}</Text>
+            <View style= { styles.header }>
+                <Text style={styles.text}>{this.props.title}</Text>
             </View>
         );
     }

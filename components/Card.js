@@ -26,7 +26,7 @@ class Card extends Component{
                     />
                 </CardSection>
                 <CardSection>
-                    <View style={StyleSheet.button}>
+                    <View style={styles.button}>
                     <View style={{width: 100}}>
                     <Button
                         title="Buy This"
