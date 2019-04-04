@@ -1,6 +1,8 @@
 // import Library
 import React from 'react';
 import { View,Text} from 'react-native';
+import Header from './Header';
+import Card from './Card';
 
 // write component
 class App extends React.Component {
@@ -8,7 +10,8 @@ class App extends React.Component {
         return (
             //component about react native
             <View>
-                <Text>Phathadon Wongsawat</Text>
+                <Header title="Album"></Header>
+                <Card></Card>
             </View>
         );
     }
