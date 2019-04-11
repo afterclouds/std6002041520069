@@ -7,16 +7,15 @@ import {AsyncStorage} from 'react-native';
 
 // write componenet
 class Login extends Component{
-	static navigationOptions = {
+	static navigationOptions {
 			title: "Login",
 			headerStyle:{
-				backgroundColor: '#FADBD8',
-				color: '#FADBD8',
-                fontSize: 20,
-                
+				backgroundColor: '#000000',
+				color: '#FFFFFF';
+				fontSize: 20,
 				},
-				headerTintColor: "white",
-	}
+				headerTintColor: "blue",
+	};
     constructor(){
         super()
         this.state = {
@@ -40,31 +39,22 @@ class Login extends Component{
         const url = "http://128.199.240.120:9999/api/auth/login";
         
         axios.post(url,this.state)
-        .then(async function (resp){
+        .then(async function (resp) => {
             console.log(resp.data.data.token)
-            alert("Login Successfully");
+            alert(Login Successfully);
 			try{
-				await AsyncStorage.setItem('User_Token',resp.data.data.token);
-                this.props.navigation.navigate("Profile");
-                
+				await AsyncStoreage.setItem('User_Token',resp.data.data.token);
+				this.props.navigation.navigate('profile');
 			
 			}catch(error){
 				console.log(error);
 			}
-            
-        }.bind(this))
+
+        })
         .catch(function (error){
             console.log(error)
 			alert(error);
         })
-    }
-    async componentDidMount(){
-        let token = await AsyncStorage.getItem("User_Token");
-        if(token!=null){
-            console.log(token);
-            this.props.navigation.navigate("Profile");
-        }
-        
     }
     render(){
         return(
@@ -92,15 +82,10 @@ class Login extends Component{
 
                 <Button
                     title="Login"
-                    color="#D5DBDB"
+                    color="#64a2ff"
                     onPress={this.onPressLogin}
 
 
-                />
-                <Button
-                    title="Profile"
-                    color="#D5DBDB"
-                    onPress={ () => this.props.navigation.navigate('Profile')}
                 />
             </View>
         );
